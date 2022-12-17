@@ -13,8 +13,22 @@ def solve(inlist):
             break
         else:
             ##solve
+            index = 14
+            while index < len(i) - 14:
+                chars = [x for x in i[index:index+14]]
+                dict = {}
+                for char in chars:
+                    if char in dict:
+                        break
+                    else:
+                        dict[char] = True
+                
+                if len(dict.keys()) == 14:
+                    result = index + 14
+                    print(result)
+                    break
+                index += 1
     
-    print(result)
 #
 
 #Inputting
